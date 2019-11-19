@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LMPush'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of LMPush.'
+  s.version          = '1.0.2'
+  s.summary          = '乐马推送'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/adam/LMPush'
+  s.homepage         = 'https://github.com/hushihua/LMPush'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'adam' => 'adam.hu.2018@gmail.com' }
-  s.source           = { :git => 'https://github.com/adam/LMPush.git', :tag => s.version.to_s }
+  s.author           = { 'Adam.Hu' => 'adam.hu.2018@gmail.com' }
+  s.source           = { :git => 'https://github.com/hushihua/LMPush.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'LMPush/Classes/**/*'
   
