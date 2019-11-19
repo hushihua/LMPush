@@ -7,8 +7,11 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/hushihua/LMPush"
   spec.license      = { :type => "Commercial", :text => "@2019 Lema.cm" }
   spec.author       = { "Adam.Hu" => "adam.hu.2018@gmail.com" }
-  spec.source       = { :http => "https://github.com/hushihua/LMPush/tree/master/Sources/LMPush1.0.0.zip" }
+  spec.source       = { :git => "https://github.com/hushihua/LMPush/tree/master/Sources/LMPush.framework", :tag=>"#{spec.version}" }
+  spec.source_files = "LMPush.framework/Headers/*.{h}"
+  spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   spec.requires_arc = true
   spec.ios.deployment_target = "10.0"
-  spec.vendored_frameworks = "LMPush"
+  spec.ios.vendored_frameworks = "LMPush.framework"
+  spec.frameworks = "Foundation", "UIKit"
 end
