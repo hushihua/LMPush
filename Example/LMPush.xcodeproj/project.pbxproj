@@ -14,6 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		66B88DE32383AD7700EDCCCB /* LMPush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B88DE22383AD7700EDCCCB /* LMPush.framework */; };
+		66B88DE42383AD7700EDCCCB /* LMPush.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 66B88DE22383AD7700EDCCCB /* LMPush.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89FB41F7F9891DF6D6558179 /* Pods_LMPush_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7B194E8651CF8BA3A65904 /* Pods_LMPush_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,20 @@
 			remoteInfo = LMPush;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66B88DE52383AD7800EDCCCB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				66B88DE42383AD7700EDCCCB /* LMPush.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2694281A1771A70BDEDA9846 /* Pods-LMPush_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMPush_Example.debug.xcconfig"; path = "Target Support Files/Pods-LMPush_Example/Pods-LMPush_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -42,6 +58,8 @@
 		607FACE51AFB9204008FA782 /* LMPush_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMPush_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		66B88DDE2383ABC900EDCCCB /* LMPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LMPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66B88DE22383AD7700EDCCCB /* LMPush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LMPush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		690A72EF595285D1DE926D69 /* Pods-LMPush_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMPush_Tests.release.xcconfig"; path = "Target Support Files/Pods-LMPush_Tests/Pods-LMPush_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		79771CE979C94C166966E098 /* LMPush.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LMPush.podspec; path = ../LMPush.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7E7B194E8651CF8BA3A65904 /* Pods_LMPush_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMPush_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89FB41F7F9891DF6D6558179 /* Pods_LMPush_Example.framework in Frameworks */,
+				66B88DE32383AD7700EDCCCB /* LMPush.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +161,8 @@
 		A7C9977BB8044C6DB87B1A27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66B88DE22383AD7700EDCCCB /* LMPush.framework */,
+				66B88DDE2383ABC900EDCCCB /* LMPush.framework */,
 				7E7B194E8651CF8BA3A65904 /* Pods_LMPush_Example.framework */,
 				E00F36577CAA55CA984D8127 /* Pods_LMPush_Tests.framework */,
 			);
@@ -171,6 +192,7 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				BC51C74A0D4E0102C3497331 /* [CP] Embed Pods Frameworks */,
+				66B88DE52383AD7800EDCCCB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -512,7 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -528,7 +550,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
