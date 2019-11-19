@@ -1,6 +1,0 @@
-framework module LMPush {
-  umbrella header "LMPush-umbrella.h"
-
-  export *
-  module * { export * }
-}
