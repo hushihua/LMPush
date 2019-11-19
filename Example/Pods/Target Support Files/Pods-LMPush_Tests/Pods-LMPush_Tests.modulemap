@@ -1,0 +1,6 @@
+framework module Pods_LMPush_Tests {
+  umbrella header "Pods-LMPush_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
