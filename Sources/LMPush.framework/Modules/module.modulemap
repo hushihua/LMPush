@@ -1,4 +1,0 @@
-framework module LMPush {
-  header "LMPush-Swift.h"
-  requires objc
-}
