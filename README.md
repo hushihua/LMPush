@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/LMPush.svg?style=flat)](https://cocoapods.org/pods/LMPush)
 [![Platform](https://img.shields.io/cocoapods/p/LMPush.svg?style=flat)](https://cocoapods.org/pods/LMPush)
 
-## “乐马推送SDK”使用入门
+## 一：“乐马推送SDK”使用入门
 
 开发者的应用“乐马推送SDK”、“乐马IM Api SDK”或“乐马 IM UI SDK”服务，需要经过如下几个简单的步骤：
 
@@ -27,7 +27,7 @@ iOS 8.0 及以上
 
 
 
-##  集成说明
+##  二：集成说明
 
 ### CocoaPods 集成（推荐）
 
@@ -54,7 +54,7 @@ LMPush用swift语言进行原生开发，关于Objective-C桥接的相关操作�
 
 
 
-## 在代码中引入
+## 三：在代码中引入
 
 ### 1.在 AppDelegate.m 文件中引入 LMPush，并初始化（以Swift项目为例）。
 ```
