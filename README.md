@@ -67,7 +67,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-### 2.在APNS回调代理方法中加入处理代码：
+### 2.在APNS回调代理方法中加入APNS回调处理代码：
 ```
 //MARK:- 初始化推送
 func registeNotifications(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)  {
@@ -101,7 +101,14 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
         token = token.replacingOccurrences(of: " ", with: "")
     }
     print("apns推送证书 -- \(token)")
-    DemoConstant.pushToken = token
+    //可以在这里进行postToken的调用
+    LMPManager.getInstance().postToken(token: token) { (resopnse:LMResponse<Bool>) in
+        if resopnse.isSuccess == true{
+            // 提交成功
+        }else{
+            // 提交失败
+        }
+    }
 }
 
 @available(iOS 10.0, *)
@@ -125,6 +132,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 ```
 
 ### 3. 提交APNS返回的推送token
+在合适的位置进行推送token的提交，如“ didRegisterForRemoteNotificationsWithDeviceToken ” 方法回调推送token成功的方法中。
 ```
 /**
  *  type: 1 生产证书， 2 测试证书
@@ -141,13 +149,13 @@ LMPManager.getInstance().postToken(token: “String”, type: 1) { (response:LMR
 ### 4. 设置推送监听器，并实现回调方法
 
 #### 4.1 设置推送监听器
-
+把一个类的实例作为推送监听器的监听处理器，并把引用赋值给LMPManager.getInstance().linstener
 ```
 LMPManager.getInstance().linstener = self
 ```
 
 #### 4.2 实现LMPNotificationLinstner方法
-
+在监听处理器中实现 LMPNotificationLinstner 中的回调方法
 ```
 func onNotificationReceive(item: LMNotification) {
     //接收到推送消息
@@ -163,6 +171,7 @@ func onNotificationReceive(item: LMNotification) {
  ```
 
 ### 5. 开启推送服务
+startSDK 方法调用成功后，开启推送服务成功
 ```
 LMPManager.getInstance().startSDK { (response:LMResponse<Bool>) in
     if response.isSuccess == true{
